@@ -17,14 +17,28 @@ function getTodos(url, callback) {
 }
 
 
-// Callback hell
+// Promise example
 
-getTodos('./todos/todos1.json', (err, data) => {
-  console.log(data)
-  getTodos('./todos/todos2.json', (err, data) => {
-    console.log(data)
-    getTodos('./todos/todos3.json', (err, data) => {
-      console.log(data)
-    })
+function getSomething () {
+  return new Promise((resolve, reject) => {
+    // fetch something
+    resolve('Some data')
+    // reject('Some error')
   })
+}
+
+// One way of calling resolve and reject as first and second param
+getSomething().then((data) => {
+  console.log(data)
+},
+(err) => {
+  console.log(err)
+}
+)
+
+// Efficient way of calling resolve and reject using then and catch block
+getSomething().then((data) => {
+  console.log(data)
+}).catch((err) => {
+  console.log(err)
 })
