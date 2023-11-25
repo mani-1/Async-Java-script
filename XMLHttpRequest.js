@@ -18,7 +18,7 @@ function getTodos(url) {
     request.send()
   })
 }
-
+// promise chain
 getTodos('./todos/todos1.json').then((data) => {
   console.log('promise 1 resolved:', data)
   return getTodos('./todos/todos2.json')
