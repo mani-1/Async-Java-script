@@ -20,7 +20,13 @@ function getTodos(url) {
 }
 
 getTodos('./todos/todos1.json').then((data) => {
-  console.log(data)
+  console.log('promise 1 resolved:', data)
+  return getTodos('./todos/todos2.json')
+}).then((data) => {
+  console.log('promise 2 resolved:', data)
+  return getTodos('./todos/todos3.json')
+}).then((data) => {
+  console.log('promise 3 resolved:', data)
 }).catch((err) => {
   console.log(err)
 })
