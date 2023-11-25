@@ -1,3 +1,5 @@
+
+
 /*
 
 A fetch() call is only rejected if the network request itself fails for some reason (host not found, no connection, server not responding, etc...).
@@ -5,6 +7,7 @@ A fetch() call is only rejected if the network request itself fails for some rea
 Any result back from the server (404, 500, etc...) is considered a successful request from the promise point of view.
 
 */
+
 
 // Async and await
 

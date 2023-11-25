@@ -6,7 +6,7 @@ function getTodos(url) {
     
     request.addEventListener('readystatechange', () => {
       if(request.readyState === 4 && request.status === 200) {
-        // convert json for reald js  array of object
+        // convert json 
         const data = JSON.parse(request.responseText)
         resolve(data)
       } else if (request.readyState === 4) {
