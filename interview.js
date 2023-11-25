@@ -122,3 +122,17 @@ Promise.any([
 }).catch((err) => {
   console.log(err)
 })
+
+// Async & await
+
+const result = async() => {
+  try {
+    const res1 = await importantAction()
+    const res2 = await shareVideo()
+    const res3 = await likeVideo()
+  } catch(err) {
+    console.log(err)
+  }
+}
+
+result()
